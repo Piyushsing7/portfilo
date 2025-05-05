@@ -1,0 +1,101 @@
+#intro {
+    height: calc(100vh - 4rem);
+    width: 100vw;
+    max-width: 75rem;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg {
+    position: absolute;
+    top: -4rem;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.introContent {
+    height: 100vh;
+    width: 100%;
+    padding: 2rem;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.hello {
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.introText {
+    line-height: 1.2;
+}
+
+.introName {
+    color: yellow;
+}
+
+.introPara {
+    font-size: medium;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin-top: 1rem;
+}
+
+.btn {
+    background: black;
+    margin: 1.5rem 0;
+    padding: 0.5rem 1rem; /* smaller padding */
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem; /* smaller text */
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: rgb(186, 168, 168);
+}
+
+.btnImg {
+    object-fit: cover;
+    margin-left: 0.5rem;
+    height: 0.85rem; /* smaller image */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 840px) {
+    .bg {
+        right: -10vw;
+    }
+    .introContent {
+        font-size: 8vw;
+        text-align: center;
+    }
+    .hello {
+        font-size: 4vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .bg {
+        right: -20vw;
+    }
+    .introContent {
+        padding: 1rem;
+        font-size: 9vw;
+    }
+    .hello {
+        font-size: 5vw;
+    }
+}
